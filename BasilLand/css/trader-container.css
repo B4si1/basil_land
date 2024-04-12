@@ -1,0 +1,70 @@
+.trader-shop-container{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: stretch;
+    margin-top: 10px;
+    width: auto;
+    min-width: 800px;
+    overflow: hidden;
+    background-image: url(../images/trader-interior.png);
+    background-position: bottom;
+    background-repeat: no-repeat;
+    border-bottom: 1px solid goldenrod;
+    border-top: 1px solid goldenrod;
+    border-radius: 5px;
+}
+
+.trader-header-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.trader-resources-container{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: space-evenly;
+    margin-top: -20px;
+}
+
+.trader-resource-title{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.trader-title{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 10px;
+    width:200px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-top: 1px solid goldenrod;
+    border-bottom: 1px solid goldenrod;
+    border-radius: 5px;
+}
+
+.trader-gold{
+    width:200px;
+}
+
+.trader-buy-sell-buttons button{
+    width:100px;
+}
+
+.trader-exit-image{
+    position: relative;
+    left: 960px;
+    bottom: 210px;
+    border-right: 1px solid goldenrod;
+    border-radius: 3px;
+}

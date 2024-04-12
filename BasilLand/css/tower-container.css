@@ -1,0 +1,43 @@
+.tower-shop-container{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: stretch;
+    width: auto;
+    min-width: 800px;
+    overflow: hidden;
+    background-image: url(../images/tower-interior.png);
+    background-position: bottom;
+    background-repeat: no-repeat;
+    border-bottom: 1px solid goldenrod;
+    border-top: 1px solid goldenrod;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.tower-exit-image{
+    position: relative;
+    left:960px;
+    bottom:350px;
+    border-right: 1px solid goldenrod;
+    border-radius: 3px;
+}
+
+.wizard-flex{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 0px;
+    border-top: 1px solid goldenrod;
+    border-bottom: 1px solid goldenrod;
+    border-radius: 3px;
+    padding: 0px;
+    background-color: rgba(27, 27, 27, 0.774);
+}
+
+.wizard-flex>p{
+    margin-top:5px;
+    margin-bottom:5px;
+}

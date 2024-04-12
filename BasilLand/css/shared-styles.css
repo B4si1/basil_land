@@ -1,0 +1,108 @@
+.resource-title{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.upgrades-container, .town-container, .resources-container,
+.save-reset-container{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: space-evenly;
+    margin-top: 10px;
+}
+.trader-resource-title, .tower-shop-title{
+    background-color: rgba(0, 0, 0, 0.5);
+    width:200px;
+    border-top: 1px solid goldenrod;
+    border-bottom: 1px solid goldenrod;
+    border-radius: 5px;
+}
+.food-container, .wood-container, .stone-container, .idea-container, 
+.houses-container, .workers-container, .tower-container, .storage-container,
+.trader-container{
+    background-color: rgba(12, 12, 12, 0.258);
+    border-bottom: 1px solid goldenrod;
+    border-radius: 5px;
+    margin-top: 0px;
+    width:200px;
+}
+.resource-title{
+    margin-top: 0px;
+    border-top: 1px solid goldenrod;
+    border-bottom: 1px solid goldenrod;
+    border-radius: 3px;
+    padding:2px;
+    background-color: rgba(27, 27, 27, 0.774);
+    margin-bottom: 1px;
+}
+.production-margins{
+    margin-top: -10px;
+}
+.center{
+    text-align: center;
+    margin: 2px;
+}
+.small{
+    font-size: x-small;
+}
+button{
+    padding: 3px;
+    width: 198px;
+    font-weight: 600;
+    border: none;
+    background-color: rgb(153, 205, 50);
+    border-radius: 3px;
+    
+}
+button:hover{
+    background-color: antiquewhite;
+    border: none;
+}
+button:active{
+    background-color: yellowgreen;
+    border: none;
+}
+.upkeep{
+    color:red;
+    text-align: center;
+}
+.hide-class{
+    display:none;
+}
+.unable{
+    background-color: red;
+}
+.log-img-scale{
+    width:20px;
+    height:20px;
+}
+.hide-class{
+    display:none;
+}
+.resource-img, .play-pause-img{
+    width: 32px;
+    height: 32px;
+}
+.manual-img{
+    cursor: url('../images/axe-sml.png'), auto;
+}
+.manual-img:active{
+    cursor: url('../images/axe-sml-down.png'), auto;
+}
+.manual-img{
+    user-select: none;
+    -webkit-user-drag: none;
+}
+.hint-container{
+    position: fixed;
+    bottom:0;
+    border-right: 1px solid goldenrod;
+    border-top: 1px solid goldenrod;
+    border-radius: 3px;
+    background-color: rgba(255, 228, 196, 0.096);;
+}
+.hint-container>p{
+    margin:0px;
+    padding:0px;
+}

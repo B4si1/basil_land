@@ -1,0 +1,19 @@
+.time-display{
+    position: fixed;
+    top:0;
+    right:0;
+    border-bottom: 1px solid goldenrod;
+    border-radius: 3px;
+    background-color: rgb(44, 43, 42);
+    padding:4px;
+}
+
+
+
+
+
+
+
+
+
+

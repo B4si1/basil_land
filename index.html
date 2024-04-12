@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="./images/leaf.png" type="image/x-icon">
+    <meta name="description" content="Basil Land - A clicker resource game.">
+    <meta name="keywords" content="clicker game, resource, collection, game, farming game, clicker, clicker game, idle game">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basil | Basil Land</title>
+    <link rel="stylesheet" href="./css/main-style.css">
+    <link rel="stylesheet" href="./css/nav-style.css">
+    <link rel="stylesheet" href="./css/basil-land-style.css">
+    <link rel="stylesheet" href="./BasilLand/css/world-container.css">
+    <link rel="stylesheet" href="./BasilLand/css/trader-container.css">
+    <link rel="stylesheet" href="./BasilLand/css/tower-container.css">
+    <link rel="stylesheet" href="./BasilLand/css/shared-styles.css">
+    <link rel="stylesheet" href="./BasilLand/css/eventlog-container.css">
+    <link rel="stylesheet" href="./BasilLand/css/buff-container.css">
+    <link rel="stylesheet" href="./BasilLand/css/helper-container.css">
+    <link rel="stylesheet" href="./BasilLand/css/responsive-queries.css">
+   
+</head>
+<body>
+    <input type="button" value="🍀 >" id="showHideBtn" class="hide-nav-btn shrink-nav-btn"></button>
+    <div id='navigation' class='nav-hidden'> 
+        <div class="navelements">
+            <a href="index.html"><input class="nav-buttons" type="button" value="Home"></button></a>
+            <a href="airgap.html"><input class="nav-buttons" type="button" value="AirGap"></button></a>
+            <a href="trees.html"><input class="nav-buttons" type="button" value="Trees"></button></a>
+            <a href="testenv.html"><input class="nav-buttons" type="button" value="Test Env"></button></a>
+            <!-- <a href="#"><input class="nav-buttons" type="button" value="Info"></button></a> -->
+            <!-- <a href="#"><input class="nav-buttons" type="button" value="Other"></button></a> -->
+            <a href="#"><input id="darkmode" class="nav-buttons" type="button" value="Dark"></button></a>
+        </div>
+    </div>
+
+    <div id="world-container" class="world-container">
+        <div class="world-head-container">
+            
+            <div id="pause-controls-container" class="pause-controls-container">
+                <img id="pause-controls" class="play-pause-img" src="./BasilLand/images/Play.png"></img>
+                <div id="pause" class="pause hide-class" style="padding: 2px;">paused</div>
+                
+            </div>
+            
+            <p id="game-time" class="game-time" style="padding-top: 5px;"></p>
+            
+            <div class="title-container">
+                <div class="title">
+                    <h3> </h3>
+                </div>
+            </div>
+            
+            <p class="resource-title gold"><img class="resource-img" src="./BasilLand/images/gold.png" alt="Gold-Image" title="Gold"></img> : <span id="gold"></span></p>
+            
+        </div>
+        
+        <div class="resources-container">
+            <div class="food-container">
+                <p class="resource-title"><img class="resource-img manual-img" id="food-collector-image" src="./BasilLand/images/food.png" alt="Food-Image" title="Food"></img>  <span id="food"><span></p>
+                <p id="food-workers" class="resource-workers"></p>
+                <p id="food-production-rate" class="small production-margins"></p>
+                <p><button id="food-assign">Assign Worker</button></p>
+                <p><button id="food-recall">Recall Worker</button></p>
+            </div>
+            <div class="wood-container">
+                <p class="resource-title"><img class="resource-img manual-img" id="wood-collector-image" src="./BasilLand/images/wood.png" alt="Wood-Image" title="Wood"></img>  <span id="wood"><span></p>
+                <p id="wood-workers" class="resource-workers"></p>
+                <p id="wood-production-rate" class="small production-margins"></p>
+                <p><button id="wood-assign">Assign Worker</button></p>
+                <p><button id="wood-recall">Recall Worker</button></p>
+            </div>
+            <div class="stone-container">
+                <p class="resource-title"><img class="resource-img manual-img" id="stone-collector-image" src="./BasilLand/images/stone.png" alt="Stone-Image" title="Stone"></img>  <span id="stone"><span></p>
+                <p id="stone-workers" class="resource-workers"></p>
+                <p id="stone-production-rate" class="small production-margins"></p>
+                <p><button id="stone-assign">Assign Worker</button></p>
+                <p><button id="stone-recall">Recall Worker</button></p>
+            </div>
+            <div class="idea-container">
+                <p class="resource-title"><img id="idea-collector-image" class="resource-img manual-img" src="./BasilLand/images/idea.png" alt="Idea-Image" title="Ideas"></img>  <span id="idea"><span></p>
+                <p id="idea-workers" class="resource-workers"></p>
+                <p id="idea-production-rate" class="small production-margins"></p>
+                <p><button id="idea-assign">Assign Worker</button></p>
+                <p><button id="idea-recall">Recall Worker</button></p>
+            </div>
+        </div>
+        
+        <div class="town-container">
+            <div class="houses-container" onmouseenter="houseHelp()">
+                <p class="resource-title"><img  class="resource-img" src="./BasilLand/images/house.png" alt="House-Image" title="House"></img><b>Houses</b></p>
+                <p id="houses"></p>
+                <p id="houses-upkeep" class="small upkeep production-margins"></p>
+                <p><button id="create-house">Create House</button></p>
+            </div>
+            <div class="trader-container" onmouseenter="traderHelp()">
+                <p class="resource-title"><img class="resource-img" src="./BasilLand/images/trader.png" alt="Trader-Image" title="Trader"><b>Trader</b></p>
+                <p id="trader" class="upkeep">Closed!</p>
+                <p id="trader-upkeep" class="small upkeep production-margins hide-class"></p>
+                <p><button id="create-trade-shop" class="hide-class">Open Trader</button></p>
+                <p><button id="open-trade-shop" class="hide-class">Trade</button></p>
+            </div>
+            <div class="workers-container" onmouseenter="workerHelp()">
+                <p class="resource-title"><img class="resource-img" src="./BasilLand/images/worker.png" alt="Worker-Image" title="Worker"><b>Workers</b></p>
+                <p id="workers"></p>
+                <p id="worker-upkeep" class="small upkeep production-margins"></p>
+                <p><button id="create-worker">Spawn Worker</button></p>
+            </div>
+        </div>
+        
+        <div class="upgrades-container">
+            <div class="tower-container" onmouseenter="towerHelp()">
+                <p class="resource-title"><img class="resource-img" src="./BasilLand/images/tower.png" alt="Tower-Image" title="Tower"><b>Tower</b></p>
+                <p id="tower" class="upkeep">Unbuilt!</p>
+                <p id="tower-upkeep" class="small upkeep production-margins hide-class"></p>
+                <p><button id="create-tower" class="hide-class">Build Tower</button></p>
+                <p><button id="open-tower" class="hide-class">Enter Tower</button></p>
+            </div>
+            <div class="tower-container" onmouseenter="castleHelp()">
+                <p class="resource-title"><img class="resource-img" src="./BasilLand/images/castle.png" alt="Castle-Image" title="Castle"><b>Castle</b></p>
+                <p id="castle" class="upkeep">WIP</p>
+                <p id="castle-upkeep" class="small upkeep production-margins hide-class"></p>
+                <p><button id="create-castle" class="hide-class">Build Castle</button></p>
+                <p><button id="open-castle" class="hide-class">Enter Castle</button></p>
+            </div>
+            
+            <div class="storage-container" onmouseenter="storageHelp()">
+                <p class="resource-title"><img class="resource-img" src="./BasilLand/images/storage.png" alt="Storage-Image" title="Storage"><b>Storage</b></p>
+                <p id="storage"></p>
+                <p><button id="create-storage">Upgrade Storage</button></p>
+            </div>
+        </div>
+        
+        
+        <div id="trader-shop-container" class="trader-shop-container hide-class">
+            
+            <div class="trader-header-container">
+                <p class="resource-title trader-gold"><img class="resource-img" src="./BasilLand/images/trader-seller.png" alt="Trader-Seller-Image" title="Trader Seller"></img>'Whats your offer!'</p>
+                <div class="trade-worker-container">
+                    <p class="trader-resource-title">
+                        <img class="resource-img" src="./BasilLand/images/trader.png" alt="Trader-Image" title="Trader"></img>
+                        <b> - TRADER - </b>
+                        <img class="resource-img" src="./BasilLand/images/trader.png" alt="Trader-Image" title="Trader"></img>
+                        <pre>  </pre>
+                    </p>
+                </div>
+                <p class="resource-title trader-gold"><img class="resource-img" src="./BasilLand/images/gold.png" alt="Gold-Image" title="Gold"></img> : <span id="gold-trader">100</span></p>
+            </div>
+            
+            
+            <div class="trader-resources-container">
+                
+                <div class="trade-food-container">
+                    <p class="trader-resource-title"><img class="resource-img" src="./BasilLand/images/food.png" alt="Food-Image" title="Food"><b>Food</b></p>
+                    <p id="food-trader"></p>
+                    <div class="trader-buy-sell-buttons">
+                        <p><button id="sell-food">Sell</button></p>
+                        <p><button id="buy-food">Buy</button></p>
+                    </div>
+                </div>
+                <div class="trade-wood-container">
+                    <p class="trader-resource-title"><img class="resource-img" src="./BasilLand/images/wood.png" alt="Wood-Image" title="Wood"><b>Wood</b></p>
+                    <p id="wood-trader"></p>
+                    <div class="trader-buy-sell-buttons">
+                        <p><button id="sell-wood">Sell</button></p>
+                        <p><button id="buy-wood">Buy</button></p>
+                    </div>
+                </div>
+                <div class="trade-stone-container">
+                    <p class="trader-resource-title"><img class="resource-img" src="./BasilLand/images/stone.png" alt="Stone-Image" title="Stone"><b>Stone</b></p>
+                    <p id="stone-trader"></p>
+                    <div class="trader-buy-sell-buttons">
+                        <p><button id="sell-stone">Sell</button></p>
+                        <p><button id="buy-stone">Buy</button></p>
+                    </div>
+                </div>
+                <div class="trade-worker-container">
+                    <p class="trader-resource-title"><img class="resource-img" src="./BasilLand/images/worker.png" alt="Worker-Image" title="Worker"><b>Worker</b></p>
+                    <p id="idleworkers"></p>
+                    <div class="trader-buy-sell-buttons">
+                        <p><button id="sell-worker">Sell</button></p>
+                        <p><button id="buy-worker">Buy</button></p>
+                    </div>
+                </div>
+            </div>
+            <img id="trader-exit" class="resource-img trader-exit-image" src="./BasilLand/images/closed.png" alt="ExitClosed-Image" title="Exit">
+        </div>
+
+        <div id="tower-shop-container" class="tower-shop-container">
+            <div class="trader-header-container">
+                <p class="resource-title trader-gold">
+                    <img class="resource-img" src="./BasilLand/images/idea.png" alt="Idea-Image" title="Idea"></img>
+                      <span id="idea-points"></span>
+                </p>
+                
+                <div class="trade-worker-container">
+                    <p class="trader-resource-title">
+                        <img class="resource-img" src="./BasilLand/images/tower.png" alt="Tower-Image" title="Tower">
+                        <b>TOWER</b>
+                        <img class="resource-img" src="./BasilLand/images/tower.png" alt="Tower-Image" title="Tower">
+                    </p>
+                    <div class="wizard-flex">
+                    <img class="resource-img" src="./BasilLand/images/wizard.png" alt="Wizard-Image" title="Wizard"></img>
+                    <p>'Behold the Power'</p>
+                    </div>
+                    <div class="trader-buy-sell-buttons">
+                        <p><button id="refine-ideas-btn">Refine Ideas</button></p>
+                    </div>
+                </div>
+                <p class="resource-title trader-gold">
+                    <img class="resource-img" src="./BasilLand/images/refinedidea.png" alt="Refined-Idea-Image" title="Refined Idea"></img>
+                      <span id="refined-ideas"></span>
+                </p>
+                    
+            </div>
+
+            <div class="trader-resources-container">
+                
+                <div class="trade-wood-container">
+                    <p class="trader-resource-title">
+                        <img class="resource-img" src="./BasilLand/images/food.png" alt="Food-Image" title="Food">
+                        <b>Farming</b></p>
+                    <p id="wood-trader"></p>
+                    <div class="trader-buy-sell-buttons">
+                        <p><button id="food-buff-btn">Buff</button></p>
+                        
+                    </div>
+                </div>
+                <div class="trade-stone-container">
+                    <p class="trader-resource-title">
+                        <img class="resource-img" src="./BasilLand/images/wood.png" alt="Wood-Image" title="Wood">
+                        <b>Lumbering</b></p>
+                    <p id="stone-trader"></p>
+                    <div class="trader-buy-sell-buttons">
+                        <p><button id="wood-buff-btn">Buff</button></p>
+                        
+                    </div>
+                </div>
+                <div class="trade-worker-container">
+                    <p class="trader-resource-title">
+                        <img class="resource-img" src="./BasilLand/images/stone.png" alt="Stone-Image" title="Stone">
+                        <b>Mining</b></p>
+                    <p id="idleworkers"></p>
+                    <div class="trader-buy-sell-buttons">
+                        <p><button id="stone-buff-btn">Buff</button></p>
+                        
+                    </div>
+                </div>
+                <div class="trade-worker-container">
+                    <p class="trader-resource-title">
+                        <img class="resource-img" src="./BasilLand/images/idea.png" alt="Idea-Image" title="Idea">
+                        <b>Thinking</b></p>
+                    <p id="idleworkers"></p>
+                    <div class="trader-buy-sell-buttons">
+                        <p><button id="idea-buff-btn">Buff</button></p>
+                        
+                    </div>
+                </div>
+            </div>
+
+            <div class="trader-resources-container">
+                <div class="trade-food-container">
+                    <p class="trader-resource-title">
+                        <img class="resource-img" src="./BasilLand/images/twins.png" alt="Worker-Image" title="Worker">
+                        <b>Twins</b></p>
+                    <p id="food-trader"></p>
+                    <div class="trader-buy-sell-buttons">
+                        <p><button id="worker-buff-btn">Research</button></p>
+                        
+                    </div>
+                </div>
+                <div class="trade-wood-container">
+                    <p class="trader-resource-title">
+                        <img class="resource-img" src="./BasilLand/images/gold.png" alt="Gold-Image" title="Gold">
+                        <b>Gold Find</b></p>
+                    <div class="trader-buy-sell-buttons">
+                        <p><button id="gold-buff-btn">Increase</button></p>
+                        
+                    </div>
+                    <p id="wood-trader"> <b>Level : <span id="gold-find-level">0</span></b></p>
+                    
+                </div>
+                <div class="trade-stone-container">
+                    <p class="trader-resource-title">
+                        <img class="resource-img" src="./BasilLand/images/rooms.png" alt="House-Image" title="House">
+                        <b>More Rooms</b></p>
+                    <p id="stone-trader"></p>
+                    <div class="trader-buy-sell-buttons">
+                        <p><button id="house-buff-btn">Research</button></p>
+                        
+                    </div>
+                </div>
+                
+            </div>
+            
+            <img id="tower-exit" class="resource-img tower-exit-image" src="./BasilLand/images/closed.png" alt="ExitClosed-Image" title="Exit">   
+        </div>
+
+        <div class="world-image-container">
+            <img class="world-container-image" src="./BasilLand/images/town.jpg"></img> 
+        </div>
+        
+        <div class="save-reset-container">
+            <div class="save-container">
+                <p class="center"><button id="save">Save</button></p>
+                <div class="autosave-form">
+                    <input id="autosave" name="autosave" type="checkbox" value="disabled"></input>
+                    <label for="autosave" style="font-size: small;">Autosave</label>
+                </div>
+            </div>
+            <p class="center"><button id="reset">Reset</button></p>
+        </div>
+    </div>
+        
+    
+    
+    <div id="buff-container" class="buff-container"></div> 
+    <!-- <div id="hint-container" class="hint-container"><p><img id="tower-exit" class="resource-img" src="./BasilLand/images/helper2.png" alt="ExitClosed-Image" title="Exit">Hints</p></div>  -->
+    
+    
+    
+    <div id="eventlog-container" class="event-log-container">
+        <div class="event-log-title">
+            <p>Event Log</p>
+        </div>
+        <div id="eventlog" class='eventlog hide-class'>
+
+        </div>
+        <div class="eventlog-show-button-container">
+            <button id="event-show-button"> Show </button>
+         </div>
+    </div>
+
+    
+    <div id="help-container" class="help-container hide-class">
+        <pre id="help-text"> </pre>
+            <img onmouseenter="welcomeHelp()" class="helper-image" src="./BasilLand/images/helper2.png" ></img>
+    </div>
+    
+</body>
+<script type="module" src="./js/navigation-script.js"></script>
+<script type="module" src="./js/darkmode-script.js"></script>
+<script type="module" src="./js/back-script.js"></script>
+<script type="module" src="./BasilLand/scripts/doc-object-script.js"></script>
+<script type="module" src="./BasilLand/scripts/buff-display-script.js"></script>
+<script src="./BasilLand/scripts/helper-script.js"></script>
+<script type="module" src="./BasilLand/scripts/save-reset-script.js"></script>
+<script type="module" src="./BasilLand/scripts/load-script.js"></script>
+<script type="module" src="./BasilLand/scripts/game-loop-script.js"></script>
+<script type="module" src="./BasilLand/scripts/event-log-script.js"></script>
+<script type="module" src="./BasilLand/scripts/input-events-script.js"></script>
+<script type="module" src="./BasilLand/scripts/trader-script.js"></script>
+<script type="module" src="./BasilLand/scripts/helper-functions.js"></script>
+
+</html>

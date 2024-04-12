@@ -1,0 +1,74 @@
+.event-log-container{
+    background-image: url('../images/log-back.png');
+    background-position: top;
+    position: fixed;
+    top: 150px;
+    left: calc(50% + 505px);
+    background-color: rgba(12, 12, 12, 0.258);
+    border-bottom: 1px solid goldenrod;
+    border-top: 1px solid goldenrod;
+    border-radius: 5px;
+    width: 265px;
+    max-height: 400px;
+    overflow: hidden;
+}
+.event-log-title{
+    border-bottom: 1px solid goldenrod;
+    border-radius: 3px;
+    text-align: center;
+}
+.event-log{
+    text-align: right;
+}
+#event-show-button{
+    color:yellowgreen;
+    background-color: rgb(22, 20, 20);
+    width:255px;
+}
+#event-show-button:hover{
+    color: whitesmoke;
+    background-color: rgb(22, 20, 20);
+    font-size: 1.1rem;
+}
+#eventlog{
+    overflow-y: scroll;
+    height: 250px;
+    max-height: 300px;
+}
+.event-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+.eventlog-show-button-container{
+    text-align: center;
+}
+.green, .red, .yellow, .orange, .purple{
+    text-align: left;
+    padding:-3px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+.green{
+    color: yellowgreen;
+}
+.red{
+    color:red;
+}
+.yellow{
+    color: yellow;
+}
+.orange{
+    color: rgb(247, 85, 26);
+}
+.purple{
+    color: rgb(5, 143, 197);
+}
+.purple-btn{
+    color:white;
+    background-color: rgb(5, 143, 197);
+}
+.purple-non-event{
+    color: rgb(5, 143, 197);
+}

@@ -1,0 +1,59 @@
+html{
+    --main-color2: purple;
+    --main-color1: yellowgreen;
+    --main-background-dark: rgb(15, 15, 15);
+    --main-background-light: rgb(54, 54, 54);
+}
+
+*{
+    box-sizing: border-box;
+    cursor: url('../images/pointer-2.png'), auto;
+}
+
+body{
+    background-color: var(--main-background-dark);
+    color:var(--main-color1);
+    margin:0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h1, h3, pre{
+    text-align: center;
+}
+
+.light{
+    background-color: var(--main-background-light);
+    color:var(--main-color1);
+    text-shadow: 0px 0px 10px black;
+}
+
+/* For Firefox */
+@-moz-document url-prefix() {
+    * {
+      scrollbar-width: thin;
+      scrollbar-color: rgb(44, 43, 42) transparent;
+    }
+}
+  
+*::-webkit-scrollbar {
+width: 8px;
+height: 8px;
+background-color: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+background-color: rgb(44, 43, 42);
+border-radius: 8px;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+background-color: yellowgreen;
+}
+
+*::-webkit-scrollbar-button {
+display: none;
+}
+
+*::-webkit-scrollbar-corner {
+display: none;
+}

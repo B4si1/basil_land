@@ -1,0 +1,17 @@
+@media (max-width: 1400px) {
+    .world-container {
+        width: 800px;
+        left: calc(50% - 400px);
+    } 
+    .event-log-container{
+        left: calc(50% + 410px);
+    }
+    .buff-container{
+        left: calc(50% + 410px);
+    }
+
+    .tower-exit-image, .trader-exit-image{
+       left:760px;
+    }
+
+} 

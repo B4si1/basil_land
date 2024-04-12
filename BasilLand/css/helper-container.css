@@ -1,0 +1,17 @@
+.help-container>pre{
+    position: fixed;
+    bottom:0;
+    width: 100%;
+    color: whitesmoke;
+    background-color: rgb(4, 29, 1);
+    margin-bottom: 0;
+    border-top: 1px solid goldenrod;
+    border-radius: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.helper-image{
+    position: fixed;
+    bottom:0;
+    height: 400px;
+}
