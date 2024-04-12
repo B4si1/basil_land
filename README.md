@@ -8,7 +8,7 @@ Welcome to Resource Gatherer, an addictive idle clicker game where you collect r
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/b70a4139-1f03-44e7-b31e-2e6c76b060e6/deploy-status)](https://app.netlify.com/sites/basilland/deploys)
 
-![Interface](https://imgur.com/Ful9bI1)
+![Interface](https://i.imgur.com/Ful9bI1.jpeg)
 
 ## Overview
 
@@ -23,6 +23,8 @@ Resource Gatherer is a simple yet engaging idle clicker game where you start wit
 - **Save, Autosave, and Reset:** Save your progress, automatically save at intervals, and reset the game if needed.
 - **Event Log:** Keep track of important events and milestones in the game.
 - **Buff Bar:** Monitor active buffs and their durations to optimize resource collection.
+
+![Buff - Event](https://i.imgur.com/fjK4cUm.jpeg)
 
 ## How to Play
 
