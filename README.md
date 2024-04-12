@@ -18,6 +18,9 @@ Resource Gatherer is a simple yet engaging idle clicker game where you start wit
 - **Worker and House Management:** Hire more workers and build houses to increase your resource production.
 - **Trader:** Exchange resources and workers for gold and vice versa with the trader.
 - **Tower:** Build a tower to acquire buffs to your resource collection speed.
+- **Save, Autosave, and Reset:** Save your progress, automatically save at intervals, and reset the game if needed.
+- **Event Log:** Keep track of important events and milestones in the game.
+- **Buff Bar:** Monitor active buffs and their durations to optimize resource collection.
 
 ## How to Play
 
@@ -26,6 +29,11 @@ Resource Gatherer is a simple yet engaging idle clicker game where you start wit
 3. **Build Houses:** Expand your empire by building houses to accommodate more workers.
 4. **Trade with Trader:** Use the trader to exchange resources and workers for gold and vice versa.
 5. **Build Tower:** Erect a tower to acquire buffs that enhance your resource collection speed.
+6. **Save and Autosave:** Save your progress manually or let the game autosave at regular intervals to ensure you never lose your hard-earned progress.
+7. **Reset:** Reset the game if you want to start fresh or experiment with different strategies.
+8. **Event Log:** Check the event log to keep track of significant milestones, achievements, and actions.
+9. **Buff Bar:** Monitor the buff bar to see active buffs and their remaining durations.
+
 
 ## WIP
 
