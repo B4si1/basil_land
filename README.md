@@ -4,7 +4,7 @@ Welcome to Resource Gatherer, an addictive idle clicker game where you collect r
 
 ## Link
 
-[Stable Version](https://https://basilland.netlify.app//)
+[Stable Version](https://basilland.netlify.app//)
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/b70a4139-1f03-44e7-b31e-2e6c76b060e6/deploy-status)](https://app.netlify.com/sites/basilland/deploys)
 
