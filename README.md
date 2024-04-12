@@ -8,6 +8,8 @@ Welcome to Resource Gatherer, an addictive idle clicker game where you collect r
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/b70a4139-1f03-44e7-b31e-2e6c76b060e6/deploy-status)](https://app.netlify.com/sites/basilland/deploys)
 
+![Interface](https://imgur.com/Ful9bI1)
+
 ## Overview
 
 Resource Gatherer is a simple yet engaging idle clicker game where you start with basic resources and gradually build your way up to a prosperous empire. Collect wood, stone, food, and ideas to expand your empire, create more workers, and build more houses.
