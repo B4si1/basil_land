@@ -38,6 +38,7 @@ Resource Gatherer is a simple yet engaging idle clicker game where you start wit
 7. **Reset:** Reset the game if you want to start fresh or experiment with different strategies.
 8. **Event Log:** Check the event log to keep track of significant milestones, achievements, and actions.
 9. **Buff Bar:** Monitor the buff bar to see active buffs and their remaining durations.
+9. **Help:** Type 'help' to get information on what is required to build and upgrade buildings.
 
 
 ## WIP
